@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'faker'
 gem 'kaminari'
-gem 'minimagick'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +53,7 @@ end
 
 group :test do
   # RSpec for Rails-3+
-  gem 'rspect-rails'
+  gem 'rspec-rails'
   # Collection of testing matchers extracted from Shoulda
   gem 'shoulda-matchers'
 end
