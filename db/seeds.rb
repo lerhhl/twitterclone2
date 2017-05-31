@@ -14,7 +14,7 @@ usermame = "Admin"
 email = "admin@admin.com"
 ownstory = "about oneself"
 
-User.create(firstname: firstname, lastname: lastname, is_admin: false,
+User.create(firstname: firstname, lastname: lastname,
             email: email, password: 'password',
             password_confirmation: 'password',
             remote_avatar_url: avatar)

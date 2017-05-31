@@ -1,0 +1,12 @@
+<div class="content">
+  
+  <h1>User Profile</h1>
+
+  <div class="basic_info">
+    <div>
+      <h3> Name: <%= current_user.first_name %> <%= current_user.last_name %></h3>
+      <h3> Description: <%= current_user.description %></h3>
+      <h3> Email: <%= current_user.email %> </h3>
+      <%= link_to "Edit profile", edit_user_registration_path %>
+    </div>
+  </div>
