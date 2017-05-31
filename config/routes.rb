@@ -3,8 +3,13 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :tweets
+    resource :userpic do
+      member do
+        patch :set_as_primary
+      end
+    end
   end
 
   root 'static_pages#home'
-
+  get 'home', to: 'pages#home'
 end
