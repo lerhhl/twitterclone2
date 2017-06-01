@@ -13,5 +13,3 @@ RSpec.describe User, type: :model do
       it { should validate_uniqueness_of (:username)}
     end
 end
-
-# Test whether devise gem tests uniqueness of email and email validity (@ sign)
