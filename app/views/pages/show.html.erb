@@ -1,0 +1,19 @@
+<h1>Tweets</h1>
+<% if current_user != nil %>
+  <button><%= link_to "New", new_user_tweet_path(current_user.id) %></button>
+<% end %>
+    <thead>
+      <th></th>
+      <th></th>
+      <th></th>
+    </thead>
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td class = "tweet-body"><%= tweet.body %></td>
+        <td><%= tweet.user.username %></td>
+        <td><%= tweet.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

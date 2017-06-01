@@ -57,6 +57,8 @@ group :test do
   gem 'rspec-rails'
   # Collection of testing matchers extracted from Shoulda
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

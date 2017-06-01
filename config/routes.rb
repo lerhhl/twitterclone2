@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'static_pages#home'
+  root 'pages#home'
+  get '/show', to: 'pages#show'
 end
