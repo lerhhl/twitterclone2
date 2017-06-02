@@ -12,12 +12,13 @@ class TweetsController < ApplicationController
   end
   
   def create
-    @user = current_user
-    @tweet = Tweet.new(tweet_params)
+    byebug
+    @tweet = Tweet.new(tweet_params2)
+    @tweet.user = current_user
     if @tweet.save
       redirect_to show_path
     else
-      render :new
+      redirect_to show_path
     end   
   end
   
@@ -38,6 +39,10 @@ class TweetsController < ApplicationController
     
   def tweet_params
     params.require(:tweet).permit(:body, :user_id)
+  end
+
+  def tweet_params2
+    params.permit(:body, :user_id)
   end
   
   def set_tweet
