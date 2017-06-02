@@ -12,7 +12,6 @@ class TweetsController < ApplicationController
   end
   
   def create
-    byebug
     @tweet = Tweet.new(tweet_params2)
     @tweet.user = current_user
     if @tweet.save
