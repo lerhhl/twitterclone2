@@ -4,7 +4,9 @@ class PagesController < ApplicationController
   end
   
   def show
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order('updated_at DESC')
   end
+
+  
 
 end
