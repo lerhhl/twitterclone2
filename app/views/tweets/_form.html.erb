@@ -9,20 +9,20 @@
 byebug
   <%= form_for @tweet do |f| %>
     <table>
-        <tr>
-          <td><%= f.label :body%></td>
-          <td><%= f.text_field :body%></td>
-        </tr>
+      <tr>
+        <td><%= f.label :body%></td>
+        <td><%= f.text_field :body%></td>
+      </tr>
 
-    Posting as <%= current_user.username %>
-    <%=  f.hidden_field :user_id, :value => current_user.id %>
-    <tr> 
-      <td colspan="2">
-        <div id="tweet_submit">
-        <%= f.submit %></td>
-        </div>
-    </tr>
+      Posting as <%= current_user.username %>
+      <%=  f.hidden_field :user_id, :value => current_user.id %>
+      <tr> 
+        <td colspan="2">
+          <div id="tweet_submit"></div>
+          <%= f.submit %>
+        </td>
+      </tr>
     </table>
-    <%= link_to 'Back to index', root_path %>
+    <%= link_to 'Back', root_path %>
   <% end %>
 </div>

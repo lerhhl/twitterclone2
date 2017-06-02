@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/show', to: 'pages#show'
+  get '/users/:user_id/tweets', to: 'pages#show', as: 'tweets'
 end
