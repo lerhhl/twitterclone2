@@ -30,7 +30,7 @@ RSpec.describe TweetsController, type: :controller do
 
     context 'when user#save fails' do
       let(:params) { attributes_for(:tweet, :invalid) }
-      it { expect(response).to render_template(:new)}
+      it { expect(response).to redirect_to show_path}
     end
 
   end
